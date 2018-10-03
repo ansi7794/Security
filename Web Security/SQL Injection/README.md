@@ -2,6 +2,8 @@
 
 ## No Defenses
 ### Solution
+Target: http://cs558web.bu.edu/sqlinject0/
+
 username : victim 
 
 Password : x' or 'c'='c 
@@ -15,6 +17,8 @@ the rest of the query the sum total is always true.
 
 ## Simple escaping
 The server escapes single quotes in the inputs by replacing them with two single quotes.
+
+Target: http://cs558web.bu.edu/sqlinject1/
 
 ### Solution
 username : victim 
@@ -32,6 +36,8 @@ rest of the query.
 The server uses the given PHP code (server.php), which escapes the username and applies the MD5
 hash function to the password. (Hint: In MySQL when two binary values are compared,
 such as ”\xd5S' = '\xb2” , the result is True.)
+
+Target: http://cs558web.bu.edu/sqlinject2/
 
 ### Solution
 
