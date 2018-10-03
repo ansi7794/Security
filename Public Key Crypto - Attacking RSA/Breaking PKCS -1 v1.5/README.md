@@ -4,7 +4,7 @@ When PKSC #1 v1.5 is used, an RSA signature on the following padded message hash
 
  00  01  |   FF....FF  |   00 | 3021300906052B0E03021A05000414     |    XX....XX 
  ------- | ----------- |  ---- |------- |------- 
- | k/8 - 38 bytes   |  00    | ASN.1 "magic" bytes   |    20-byte SHA-1 digest |
+    | k/8 - 38 bytes   |      | ASN.1 "magic" bytes   |    20-byte SHA-1 digest |
 
 
 When PKCS padding is used, it is important for implementations to verify that every bit of the padded, signed message is exactly as it should be. It is tempting for an implementor to validate the signature by first stripping off the 00 01 bytes, then some number of padding FF bytes, then 00, and then parse the ASN.1 and verify the hash. If the implementation does not check the length of the FF bytes and that the hash is in the least significant bits of the message, then it the public verification exponent e is low, is possible for an attacker to forge values that pass this validation check.
