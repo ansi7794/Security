@@ -28,7 +28,7 @@ Also the next quote when read due to already having a quote before it does not g
 2 single quotes. Thus the query effectively becomes true as 5=5 is true and is or-ed with the 
 rest of the query.
 
-# Escaping and hashing
+## Escaping and hashing
 The server uses the given PHP code (server.php), which escapes the username and applies the MD5
 hash function to the password. (Hint: In MySQL when two binary values are compared,
 such as ”\xd5S' = '\xb2” , the result is True.)
