@@ -1,4 +1,4 @@
-# Small Message Space Attack
+# Small Message Space Attack - Textbook RSA
 
 In this program we use a public key, a ciphertext and a file with possible messages in order to perform a small message space attack.
 The program print out the output - the identified message.
